@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes: 
+      - ".:/usr/src/app"
+    ports: 
+      - "8080:8080"
+  redis:
+    image: 'redis:5.0-alpine'
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./data:/data"
+    command: ["redis-server", "--bind", "redis", "--port", "6379"]

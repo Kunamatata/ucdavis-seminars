@@ -1,0 +1,16 @@
+html
+  style
+    include style.css
+  link(href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet")
+
+  body
+    .title= "UC Davis Seminars"
+    .seminars
+      each seminar in seminars
+        .seminar
+          .seminar-title
+            h3= seminar.title
+          .seminar-description
+            span= seminar.description
+          .seminar-startDate
+            span= new Date(seminar.startDate).toLocaleString()

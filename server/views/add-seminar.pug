@@ -1,0 +1,25 @@
+html
+  style
+    include style.css
+  link(href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet")
+
+  body
+    h1.display-4.m-b-2 Add a Seminar
+
+    form(method='POST' action='/seminars')
+      .form-group
+        label(for='title') Title:
+        input#name.form-control(type='text', placeholder='Seminar title' name='title')
+      .form-group
+        label(for='description') Description:
+        input#email.form-control(type='text' name='description' placeholder='Seminar description')
+      .form-group
+        label(for='room') Room:
+        input#room.form-control(type='text', placeholder='Room' name='room')
+      .form-group
+        label(for='startdate') Start Date:
+        input(type='datetime-local' name='startDate')
+        .form-group
+        label(for='speaker') Speaker:
+        input(type='text' name='speaker' placeholder='Speaker name')
+      button.btn.btn-primary(type='submit') Submit Seminar
