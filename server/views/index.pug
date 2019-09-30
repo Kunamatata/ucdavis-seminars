@@ -4,4 +4,9 @@ html
   style
     include style.css
   body
-   h1= message
+    h1= message
+    if locals.user
+      a(href="/user") User Profile
+      a(href="/logout") Log out
+    else
+      a(href="/login") Log in

@@ -4,13 +4,17 @@ html
   link(href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet")
 
   body
+    input(type="text" class="search-input")
     .title= "UC Davis Seminars"
     .seminars
       each seminar in seminars
         .seminar
-          .seminar-title
+          .seminar-title(data-title=seminar.title data-description=seminar.description)
             h3= seminar.title
           .seminar-description
             span= seminar.description
           .seminar-startDate
             span= new Date(seminar.startDate).toLocaleString()
+    script
+      include scripts.js
+  
