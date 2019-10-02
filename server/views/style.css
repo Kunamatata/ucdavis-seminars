@@ -1,11 +1,14 @@
 :root {
-  --main-bg-color: #f1f3f5;
-  --main-color: #fff;
+  --main-bg-color: #1f232c;
+  --main-color: #e6e6e6;
   --shadow: #f7f8fa;
 }
 
 body {
   background-color: var(--main-bg-color);
+  width: 960px;
+  margin: 0 auto;
+  color: var(--main-color);
 }
 
 .title {
@@ -18,7 +21,6 @@ body {
 .seminars {
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, 800px);
   grid-template-rows: auto;
 }
 
@@ -27,13 +29,33 @@ body {
   padding: 1em;
   display: block;
   position: relative;
+  width: 100%;
   border-radius: 4px;
   margin: 0 auto;
-  background-color: var(--main-accent-color);
-  color: #111111;
-  box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
-    0 1px 2px rgba(102, 119, 136, 0.3), 0 8px 12px rgba(58, 193, 203, 0.1);
+  color: #e6e6e6;
   transition: all 0.2s ease-in-out;
+}
+
+.seminar::after {
+  display: block;
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: var(--main-color);
+}
+
+.seminar:nth-child(1)::before {
+  display: block;
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background-color: var(--main-color);
 }
 
 .seminar:hover {
