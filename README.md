@@ -1,6 +1,6 @@
 # ucdavis-seminars
 
-You must create a .env folder containing the following information:
+You must create a `.env` folder containing the following information:
 
 ```
 ACCESSKEYID=...
